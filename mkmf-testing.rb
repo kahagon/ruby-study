@@ -17,7 +17,7 @@ class MakefilePropertyFetcher
     @result = m.to_a[@matchGroupPosition] if m
   end
   def match?
-    return @result if @result
+    return @result
   end
 end
 
