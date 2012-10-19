@@ -1,0 +1,18 @@
+japanino.name=Gakken Japanino（学研 大人の科学 ジャパニーノ）
+
+japanino.upload.protocol=stk500
+japanino.upload.maximum_size=14336
+japanino.upload.speed=19200
+
+japanino.bootloader.low_fuses=0xe2
+japanino.bootloader.high_fuses=0xdd
+japanino.bootloader.extended_fuses=0x00
+japanino.bootloader.path=lilypad
+japanino.bootloader.file=LilyPadBOOT_168.hex
+japanino.bootloader.unlock_bits=0x3F
+japanino.bootloader.lock_bits=0x0F
+
+japanino.build.mcu=atmega168
+japanino.build.f_cpu=8000000L
+japanino.build.core=arduino
+japanino.build.variant=standard

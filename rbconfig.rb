@@ -1,3 +1,4 @@
 require 'rbconfig'
 
-puts RbConfig.expand("$(bindir) $(libdir)")
+puts RbConfig.expand("$(rubyhdrdir)/$(arch)");
+puts RbConfig.expand("$(rubylibdir)");
