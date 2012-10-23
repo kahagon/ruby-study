@@ -84,12 +84,12 @@ class Command
 end
 
 if (ARGV.size < 1) 
-  puts "Usage: " + __FILE__ + " /path/to/port"
+  puts "Usage: " + __FILE__ + " /path/to/port [baud_rate = 38400]"
   exit 1
 end
 
 port = ARGV[0]
-device = MySerialPort.new(port, ARGV.size > 1 ? ARGV[1] : 38400) 
+device = MySerialPort.new(port, ARGV.size > 1 ? ARGV[1].to_i : 38400) 
 prompt = "> "
 commands = {}
 
@@ -257,11 +257,3 @@ while line = STDIN.gets
   end
   print prompt
 end
-
-=begin
-puts ARGV.size
-port = MySerialPort.new "/dev/ttyS0"
-puts port
-port.baud = 38400
-puts port
-=end
