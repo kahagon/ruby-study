@@ -9,7 +9,7 @@ int serialStatus = 0;
 
 void setup() {
   // connect to the serial port
-  Serial.begin(115200);
+  Serial.begin(38400);
   setupPins();
   serialStatus = 1;
 }
@@ -33,12 +33,14 @@ void loop()
       {
         cmd_arg[0] = int(readData()) - 48;
         digitalWrite(cmd_arg[0],LOW);
+        //Serial.println("set digital low");
       }
   
       if(cmd==1) //set digital high
       {
         cmd_arg[0] = int(readData()) - 48;
         digitalWrite(cmd_arg[0],HIGH);
+        //Serial.println("set digital high");
       }
   
       if(cmd==2) //get digital value
